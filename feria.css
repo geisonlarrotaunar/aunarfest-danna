@@ -1,0 +1,19 @@
+:root{--navy:#041a4a;--navy-2:#06307a;--azul:#0b5ad6;--azul-claro:#4d9bff;--amarillo:#ffc533;--amarillo-2:#ffe29a;
+--font-display:"Fraunces",Georgia,serif;--script:"Yellowtail",cursive}
+.hero__name,.h2,.h3,.date-card h3,.text-card h3,.photo__badge,.marquee__track{font-family:var(--font-display);font-weight:900;letter-spacing:-.01em}
+.hero__small{font-family:var(--script);font-weight:400;font-size:clamp(1.6rem,4vw,2.6rem);color:var(--amarillo)}
+.hero__name{text-transform:uppercase;line-height:.92;text-shadow:0 6px 0 rgba(0,20,80,.35)}
+.eyebrow{font-family:var(--script)!important;font-size:1.4rem;text-transform:none;letter-spacing:.02em}
+body{background:radial-gradient(1200px 600px at 80% -10%,#0b5ad6 0%,transparent 60%),var(--navy)}
+.bunting{position:absolute;inset:0 0 auto 0;height:60px;z-index:6;background:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='60'><path d='M0 6 Q120 22 240 6' stroke='%23ffffff' stroke-width='2' fill='none'/><path d="M10 8 L40 8 L25 52 Z" fill="%230b5ad6"/><path d="M70 8 L100 8 L85 52 Z" fill="%23ffffff"/><path d="M130 8 L160 8 L145 52 Z" fill="%233b86e8"/><path d="M190 8 L220 8 L205 52 Z" fill="%23ffc533"/></svg>") repeat-x;background-size:240px 60px;pointer-events:none;filter:drop-shadow(0 4px 4px rgba(0,0,0,.25))}
+.nav{padding-top:3.2rem}
+.tri{clip-path:circle(50%)!important}
+.tri--a{background:repeating-radial-gradient(circle,#0b5ad6 0 6px,#06307a 6px 12px)!important;opacity:.55!important}
+.photo__ring{background:radial-gradient(circle,var(--amarillo) 0 9%,#0b5ad6 9% 11%,transparent 11%),repeating-radial-gradient(circle,#06307a 0 5px,#0a3f9e 5px 10px)!important;border-radius:50%!important;inset:6% -6% 22%!important;animation:spin 24s linear infinite;box-shadow:0 0 0 6px rgba(255,255,255,.25),0 30px 70px rgba(0,0,0,.45)!important}
+.photo__vinyl{display:none}
+.photo__tri{clip-path:none!important;border-radius:50%;background:radial-gradient(circle,#fff 0 22%,var(--amarillo) 23%)!important}
+.photo__img{height:108%!important;-webkit-mask-image:linear-gradient(#000 88%,transparent 100%)!important;mask-image:linear-gradient(#000 88%,transparent 100%)!important}
+.hero__photo{aspect-ratio:3/4.6!important}
+.marquee{background:linear-gradient(90deg,#ffc533,#ffe29a,#ffc533)}
+.btn--yellow{background:var(--amarillo)}
+#ytBox{position:fixed;left:-9999px;top:0;width:200px;height:200px;overflow:hidden}

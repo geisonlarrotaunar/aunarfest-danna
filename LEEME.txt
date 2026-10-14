@@ -1,0 +1,24 @@
+AUNARFEST · Danna Espitia — Señorita AUNAR
+
+Archivos:
+  index.html   estructura y textos
+  style.css    diseño (azul y amarillo AUNAR)
+  script.js    arranque, juego, sonidos y botones de apoyo
+  img/         logo-aunar.png, danna-feria.png (traje salsero), danna-bg.jpg
+
+Cómo publicarla (Vercel):
+  1. Sube la carpeta completa a un repositorio de GitHub o arrástrala a vercel.com/new
+  2. No necesita build: es HTML/CSS/JS estático.
+
+Personalizar:
+  - Redes, WhatsApp y fecha de la coronación: abre script.js y edita el bloque CONFIG (arriba del todo).
+    Los botones de redes solo aparecen si les pones un valor.
+  - Vidas del juego: también en CONFIG. Los 6 módulos del juego están en script.js (lista MODULES).
+  - Textos: index.html.
+  - Para probar en local, abre index.html con doble clic (o usa "Live Server").
+
+Música de fondo (Oiga, mire, vea, YouTube; necesita abrirse desde un servidor/Vercel, no con doble clic):
+  - Se genera sola en el navegador (sin archivos, sin derechos de autor) y se controla con el botón
+    "música on/off" de la esquina.
+  - Si prefieres una canción propia, guarda el .mp3 en una carpeta audio/ y pon la ruta en
+    CONFIG.musicaFondo (ej: "audio/fondo.mp3"). Usa solo música con licencia o libre de derechos.

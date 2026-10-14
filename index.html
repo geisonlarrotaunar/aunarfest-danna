@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Danna Espitia · Señorita AUNAR · AUNARFEST · Feria de Cali</title>
+  <meta name="description" content="Conoce a Danna Espitia, candidata de Ingeniería Informática a Señorita AUNAR en el AUNARFEST. Juega, descúbrela y regálale tu apoyo.">
+  <meta name="theme-color" content="#041a4a">
+  <meta property="og:title" content="Danna Espitia · Candidata a Señorita AUNAR">
+  <meta property="og:description" content="Ingeniería Informática · Semestre 8 · Jornada nocturna. Juega para conocerla y regálale tu apoyo en el AUNARFEST.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="img/danna-bg.jpg">
+  <link rel="icon" href="img/logo-aunar.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800;9..144,900&family=Yellowtail&family=JetBrains+Mono:wght@400;700&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="feria.css">
+</head>
+<body class="is-booting">
+
+  <!-- ============ PANTALLA DE ARRANQUE ============ -->
+  <div class="boot" id="boot" role="dialog" aria-label="Pantalla de carga">
+    <div class="boot__tri"></div>
+    <div class="boot__box">
+      <img class="boot__logo" src="img/logo-aunar.png" alt="Logo Corporación Universitaria Autónoma de Nariño">
+      <pre class="boot__log" id="bootLog" aria-live="polite"></pre>
+      <div class="boot__bar"><span id="bootBar"></span></div>
+      <button class="btn btn--yellow boot__enter" id="bootEnter" hidden>Entrar ▸</button>
+      <button class="boot__mute" id="bootMute" hidden>entrar sin sonido</button>
+    </div>
+  </div>
+
+  <!-- Control de sonido -->
+  <button class="sound-toggle" id="soundToggle" aria-pressed="true" aria-label="Activar o silenciar sonido">
+    <span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+    <span id="soundLabel">música on</span>
+  </button>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero" id="inicio">
+    <div class="hero__bg" aria-hidden="true">
+      <span class="tri tri--a"></span>
+      <span class="tri tri--b"></span>
+      <span class="tri tri--c"></span>
+      <span class="grid"></span>
+    </div>
+
+    <div class="bunting" aria-hidden="true"></div>
+    <nav class="nav">
+      <a class="nav__brand" href="#inicio">
+        <img src="img/logo-aunar.png" alt="" width="40" height="40">
+        <span>AUNARFEST</span>
+      </a>
+      <div class="nav__links">
+        <a href="#juego">Juega</a>
+        <a href="#perfil">Conócela</a>
+        <a href="#fechas">Fechas</a>
+        <a href="#apoyo" class="nav__cta">Apóyala</a>
+      </div>
+    </nav>
+
+    <div class="hero__inner">
+      <div class="hero__text">
+        <p class="chip chip--mono reveal">🎺 ¡Oiga, mire, vea! · Feria de Cali</p>
+        <h1 class="hero__title reveal">
+          <span class="hero__small">Sultana de la salsa, soy</span>
+          <span class="hero__name">Danna<br>Espitia</span>
+        </h1>
+        <p class="hero__lead reveal">
+          Ingeniera en formación, cantante de corazón y programadora por pasión, con el ritmo de la Feria de Cali en los pies.
+          Quiero ser tu <strong>Señorita AUNAR</strong> y necesito tu apoyo para llegar al AUNARFEST.
+        </p>
+        <div class="hero__actions reveal">
+          <a href="#juego" class="btn btn--yellow" data-sfx="click">🎮 Jugar y conocerme</a>
+          <a href="#apoyo" class="btn btn--ghost" data-sfx="click">💛 Quiero apoyarla</a>
+        </div>
+        <ul class="hero__tags reveal">
+          <li>Ing. Informática</li>
+          <li>Semestre 8</li>
+          <li>Jornada nocturna</li>
+        </ul>
+        <div class="hero__social reveal" id="heroSocials" aria-label="Redes sociales de Danna"></div>
+      </div>
+
+      <div class="hero__photo reveal" id="photo">
+        <div class="photo__ring"></div><div class="photo__vinyl"></div>
+        <div class="photo__tri"></div>
+        <img src="img/danna-feria.png" alt="Danna Espitia, candidata a Señorita AUNAR de Ingeniería Informática" class="photo__img" width="1420" height="1950">
+        <span class="float float--1">♪</span>
+        <span class="float float--2">🎺</span>
+        <span class="float float--3">♫</span>
+        <span class="float float--4">🪇</span>
+        <div class="photo__badge"><b>Señorita</b><span>AUNAR</span></div>
+      </div>
+    </div>
+
+    <div class="hero__scroll" aria-hidden="true">desliza ↓</div>
+  </header>
+
+  <!-- ============ CINTA ============ -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>FERIA DE CALI ✦ OIGA, MIRE, VEA ✦ SEÑORITA AUNAR ✦ DANNA ESPITIA ✦ INGENIERÍA INFORMÁTICA ✦ CAPITAL MUNDIAL DE LA SALSA ✦ </span>
+      <span>FERIA DE CALI ✦ OIGA, MIRE, VEA ✦ SEÑORITA AUNAR ✦ DANNA ESPITIA ✦ INGENIERÍA INFORMÁTICA ✦ CAPITAL MUNDIAL DE LA SALSA ✦ </span>
+    </div>
+  </div>
+
+  <!-- ============ JUEGO ============ -->
+  <section class="game" id="juego">
+    <div class="wrap">
+      <p class="eyebrow reveal">nivel 01 · compila la corona</p>
+      <h2 class="h2 reveal">Compila la corona de la reina</h2>
+      <p class="sub reveal">
+        Para llegar al AUNARFEST, Danna necesita instalar <b>6 módulos</b>: todo lo que hace posible su participación.
+        Toca los módulos que caen para <b>instalarlos</b> y esquiva los <b>🐛 bugs</b>, que te quitan un corazón.
+        Si aparece un <b>💛 apoyo</b>, recuperas una vida. ¡Instala los 6 y compila la corona 👑 para ver su perfil!
+      </p>
+
+      <div class="console reveal">
+        <div class="console__top">
+          <span class="dots"><i></i><i></i><i></i></span>
+          <span class="console__title">compilar_reina.js</span>
+          <span class="hearts" id="hearts" aria-label="Vidas">♥ ♥ ♥</span>
+        </div>
+
+        <div class="console__main">
+          <div class="arena" id="arena" aria-label="Zona de juego">
+            <div class="arena__start" id="arenaStart">
+              <p class="arena__hint">tap / clic para instalar módulos</p>
+              <button class="btn btn--yellow" id="playBtn">▶ Compilar</button>
+            </div>
+            <div class="arena__end" id="arenaEnd" hidden>
+              <p id="endMsg"></p>
+              <button class="btn btn--yellow" id="retryBtn">↻ Intentar de nuevo</button>
+            </div>
+          </div>
+
+          <aside class="term" aria-label="Terminal del juego">
+            <div class="term__head">terminal · bash</div>
+            <div class="term__log" id="termLog" aria-live="polite"></div>
+          </aside>
+        </div>
+
+        <ul class="modules" id="modules" aria-label="Módulos por instalar">
+          <li data-mod="inscripcion"><span>📝</span> Inscripción</li>
+          <li data-mod="ecologico"><span>♻️</span> Traje ecológico</li>
+          <li data-mod="gala"><span>👗</span> Traje de gala</li>
+          <li data-mod="comparsa"><span>🎭</span> Comparsa</li>
+          <li data-mod="carroza"><span>🎈</span> Carroza</li>
+          <li data-mod="alistamiento"><span>💄</span> Alistamiento</li>
+        </ul>
+
+        <div class="console__bottom">
+          <div class="progress" aria-label="Progreso de compilación"><span id="progressBar"></span></div>
+          <span class="score"><b id="score">0</b> / 6 módulos</span>
+        </div>
+      </div>
+
+      <p class="skip reveal"><button id="skipBtn" class="link">¿Sin tiempo? ver mi perfil directo →</button></p>
+    </div>
+  </section>
+
+  <!-- ============ PERFIL (bloqueado hasta ganar) ============ -->
+  <section class="profile is-locked" id="perfil">
+    <div class="lock" id="lock" aria-hidden="false">
+      <div class="lock__card">
+        <div class="lock__icon">🔒</div>
+        <h3>ACCESO DENEGADO</h3>
+        <p>Termina el juego para desbloquear mi información ✦</p>
+        <a href="#juego" class="btn btn--yellow" data-sfx="click">Ir al juego</a>
+      </div>
+    </div>
+
+    <div class="profile__content">
+      <div class="wrap">
+        <p class="eyebrow">acceso concedido ✓</p>
+        <h2 class="h2">Conoce a Danna</h2>
+
+        <!-- Ficha -->
+        <div class="ficha">
+          <article class="ficha__item">
+            <span class="ficha__k">candidata</span>
+            <span class="ficha__v">Danna Espitia</span>
+          </article>
+          <article class="ficha__item">
+            <span class="ficha__k">programa</span>
+            <span class="ficha__v">Ingeniería Informática</span>
+          </article>
+          <article class="ficha__item">
+            <span class="ficha__k">semestre</span>
+            <span class="ficha__v">8.º</span>
+          </article>
+          <article class="ficha__item">
+            <span class="ficha__k">jornada</span>
+            <span class="ficha__v">Nocturna</span>
+          </article>
+          <article class="ficha__item ficha__item--wide">
+            <span class="ficha__k">institución</span>
+            <span class="ficha__v">Corporación Universitaria Autónoma de Nariño · Villavicencio</span>
+          </article>
+          <article class="ficha__item ficha__item--wide ficha__item--yellow">
+            <span class="ficha__k">evento</span>
+            <span class="ficha__v">AUNARFEST · elección de la Señorita AUNAR</span>
+          </article>
+        </div>
+
+        <!-- Gustos -->
+        <h3 class="h3">Lo que me mueve</h3>
+        <div class="likes">
+          <article class="like">
+            <div class="like__icon">🎤</div>
+            <h4>El canto</h4>
+            <p>Cuando canto, el mundo baja el volumen y mi voz se vuelve mi mejor manera de contar quién soy. Cada nota es una oportunidad de conectar con quien me escucha, de transmitir emoción y de regalar alegría, ya sea en un salón de clases, en una reunión con amigos o sobre un escenario.</p>
+          </article>
+          <article class="like">
+            <div class="like__icon">🎸</div>
+            <h4>Música popular</h4>
+            <p>Letras con sentimiento, guitarras que abrazan y melodías que se cantan a todo pulmón: la música popular es la banda sonora de mi vida. Me recuerda mis raíces, me hace sentir en casa y me enseña que las historias más sencillas son las que más tocan el corazón.</p>
+          </article>
+          <article class="like">
+            <div class="like__icon">💻</div>
+            <h4>Programación</h4>
+            <p>Me fascina convertir una idea en algo que funciona: escribir una línea de código, resolver un problema y ver cómo todo cobra vida en pantalla. Programar me enseñó a ser paciente, creativa y constante, y me demuestra cada día que la tecnología también puede tener alma.</p>
+          </article>
+        </div>
+
+        <!-- Motivación y objetivo -->
+        <div class="texts">
+          <article class="text-card text-card--blue">
+            <span class="text-card__tag">motivacion.txt</span>
+            <h3>¿Qué me motiva?</h3>
+            <p>Me motiva representar a Ingeniería Informática porque quiero demostrar que detrás de una profesión también hay una mujer con sueños, personalidad, talento y mucho por aportar.</p>
+            <p>Quiero asumir este reto con alegría, seguridad y autenticidad, aprovechando la experiencia para crecer, conocer nuevas personas y representar con orgullo a mi programa.</p>
+          </article>
+
+          <article class="text-card text-card--yellow">
+            <span class="text-card__tag">como_reina.doc</span>
+            <h3>Mi objetivo como reina</h3>
+            <p>Porque quiero representar más que una imagen. Quiero representar a una mujer auténtica, segura, responsable y soñadora, que se esfuerza por alcanzar sus metas y que no tiene miedo de asumir nuevos retos.</p>
+            <p>Soy una persona que disfruta aprender, relacionarse con los demás y mostrar lo mejor de sí misma desde la sencillez.</p>
+            <p>Si tengo la oportunidad de ser Señorita AUNAR, quiero llevar con orgullo ese título y representar a mi institución con alegría, compromiso y corazón.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FECHAS ============ -->
+  <section class="dates" id="fechas">
+    <div class="wrap">
+      <p class="eyebrow reveal">agenda AUNARFEST</p>
+      <h2 class="h2 reveal">Fechas para no perderte</h2>
+      <p class="sub reveal">Tres días para vivir el AUNARFEST. Anótalos y acompáñanos con toda la energía de Ingeniería Informática.</p>
+
+      <div class="countdown reveal" id="countdown" hidden>
+        <span class="countdown__num" id="countNum">0</span>
+        <span class="countdown__txt" id="countTxt">días para la coronación</span>
+      </div>
+
+      <ol class="timeline">
+        <li class="date-card reveal">
+          <div class="date-card__day"><b>12</b><span>nov</span><em>jueves</em></div>
+          <div class="date-card__body">
+            <h3>Presentación de las reinas</h3>
+            <p>Las candidatas de cada programa se presentan ante la comunidad AUNAR. ¡Ven a conocerlas y a alentar a Danna!</p>
+          </div>
+        </li>
+        <li class="date-card reveal">
+          <div class="date-card__day"><b>13</b><span>nov</span><em>viernes</em></div>
+          <div class="date-card__body">
+            <h3>Caravana y desfile de traje ecológico</h3>
+            <p>Recuerda acompañarnos con tu vehículo para decorarlo y apoyarnos en el auditorio AUNAR para el desfile.</p>
+            <span class="tag">🚗 trae tu vehículo</span>
+          </div>
+        </li>
+        <li class="date-card date-card--gold reveal">
+          <div class="date-card__day"><b>14</b><span>nov</span><em>sábado</em></div>
+          <div class="date-card__body">
+            <h3>Coronación 👑</h3>
+            <p class="place">📍 Potenza · Auditorio, piso 8</p>
+            <p>Recuerda comprar tu manilla: el aforo es limitado.</p>
+            <span class="tag">🎟️ aforo limitado</span>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ APOYO ============ -->
+  <section class="support" id="apoyo">
+    <div class="wrap support__inner">
+      <img class="support__logo reveal" src="img/logo-aunar.png" alt="Logo AUNAR" width="120" height="120">
+      <p class="eyebrow eyebrow--dark reveal">tu apoyo cuenta</p>
+      <h2 class="h2 h2--dark reveal">¿Me ayudas a llegar al AUNARFEST?</h2>
+      <p class="sub sub--dark reveal">
+        Actualmente la reina es del programa de <b>Ingeniería Informática</b> y queremos volver a ganar.
+        Cada aporte, mensaje y compartida me acerca a representar a mi programa. Gracias por creer en mí 💛
+      </p>
+
+      <article class="donate reveal">
+        <div class="donate__price">
+          <span class="donate__label">colaboración de apoyo</span>
+          <b>$10.000</b>
+          <span class="donate__cur">COP</span>
+        </div>
+        <div class="donate__body">
+          <h3>Tu aporte hace posible su participación</h3>
+          <p>Tu aporte se destinará a cubrir los gastos que harán posible su participación, entre ellos:</p>
+          <ul class="checks">
+            <li>✅ Inscripción</li>
+            <li>✅ Materiales para el traje ecológico</li>
+            <li>✅ Alquiler del traje de gala</li>
+            <li>✅ Alquiler de trajes para la comparsa</li>
+            <li>✅ Materiales para la decoración de la carroza</li>
+            <li>✅ Alistamiento de la reina (maquillaje, peinado, entre otros)</li>
+          </ul>
+          <p class="donate__note">Recuerda que el apoyo debe ser total 💪🏽 porque juntos hacemos grande a nuestro programa. 🌟</p>
+        </div>
+      </article>
+
+      <div class="contact reveal">
+        <p class="contact__title">¿Quieres aportar o tienes dudas? Escríbenos por WhatsApp</p>
+        <a class="btn btn--blue" id="waBtn" href="https://wa.me/573136634850" target="_blank" rel="noopener" data-sfx="click">💬 +57 313 6634850</a>
+        <p class="contact__info">Más información con el <b>Ing. Geison Larrota</b></p>
+      </div>
+
+      <div class="support__actions reveal">
+        <button class="btn btn--blue-outline" id="heartBtn">💛 Enviar mi apoyo</button>
+        <button class="btn btn--blue-outline" id="shareBtn">📲 Compartir por WhatsApp</button>
+        <button class="btn btn--blue-outline" id="copyBtn">🔗 Copiar enlace</button>
+      </div>
+      <p class="support__count reveal"><b id="heartCount">0</b> corazones enviados desde este dispositivo</p>
+
+      <div class="socials reveal" id="socials"></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>Hecho con código, salsa y cariño para <b>Danna Espitia</b> · Señorita AUNAR</p>
+    <p>AUNARFEST · Corporación Universitaria Autónoma de Nariño – Villavicencio</p>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="confetti" id="confetti" aria-hidden="true"></div>
+
+  <div id="ytBox" aria-hidden="true"><div id="ytPlayer"></div></div>
+  <script src="script.js"></script>
+  <script src="feria.js"></script>
+</body>
+</html>
